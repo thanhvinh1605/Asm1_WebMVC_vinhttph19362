@@ -1,0 +1,66 @@
+﻿@model Asm1_WebMVC_vinhttph19362.Models.Product
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>Edit Product</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Description</label>
+        <input type="text" class="form-control" asp-for="Description">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Price</label>
+        <input type="number" class="form-control" asp-for="Price">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Quantity</label>
+        <input type="number" class="form-control" asp-for="Quantity">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">CreatedAT</label>
+        <input type="date" class="form-control" asp-for="CreatedAt">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Brand</label>
+        <input type="text" class="form-control" asp-for="Brand">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Size</label>
+        <input type="text" class="form-control" asp-for="Size">
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ImageUrl</label>
+        <input type="text" class="form-control" asp-for="ImageUrl">
+
+    </div>
+
+    <button type="submit" class="btn btn-primary" asp-action="View">Update</button>
+
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

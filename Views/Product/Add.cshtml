@@ -1,0 +1,60 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h1>Add Product</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" required>
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <input type="text" class="form-control" asp-for="Description" required>
+        <span asp-validation-for="Description"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <input type="number" class="form-control" asp-for="Price" required>
+        <span asp-validation-for="Price"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" asp-for="Quantity" required>
+        <span asp-validation-for="Quantity"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="CreatedAt" class="form-label">CreatedAt</label>
+        <input type="date" class="form-control" asp-for="CreatedAt" required>
+        <span asp-validation-for="CreatedAt"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Brand" class="form-label">Brand</label>
+        <input type="text" class="form-control" asp-for="Brand" required>
+        <span asp-validation-for="Brand"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Size" class="form-label">Size</label>
+        <input type="text" class="form-control" asp-for="Size" required>
+        <span asp-validation-for="Size"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="ImageUrl" class="form-label">ImageUrl</label>
+        <input type="text" class="form-control" asp-for="ImageUrl" required data-val-url="true">
+        <span asp-validation-for="ImageUrl"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
